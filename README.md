@@ -8,8 +8,16 @@ Solve **300 real-world SQL business problems in 30 days** to strengthen SQL and 
 * **Duration:** 30 Days
 * **Questions Per Day:** 10
 * **Total Questions:** 300
+  
 
 ---
+
+🎯 Objectives
+Master SQL from Beginner to Advanced.
+Develop business problem-solving skills.
+Learn to think like a Data Analyst.
+Prepare for Data Analyst interviews.
+Build a portfolio of SQL solutions.
 
 # 📅 Day 1 (02 August 2026)
 
@@ -87,15 +95,6 @@ Solve **300 real-world SQL business problems in 30 days** to strengthen SQL and 
 * **Questions Completed:** 10 / 300
 * **Progress:** **3.33%**
 
----
 
-## 🎯 End Goal
 
-By completing this challenge, I aim to:
-
-* Solve **300 real-world SQL business problems**
-* Master SQL for Data Analytics
-* Develop strong analytical and business problem-solving skills
-* Build a portfolio of SQL solutions for Data Analyst interviews
-* Become job-ready for Data Analyst internships and full-time roles
 
