@@ -89,11 +89,160 @@ Build a portfolio of SQL solutions.
 
 ---
 
-# 📊 Progress
+# 📅 SQL 300 Questions Challenge – Day 2
 
-* **Days Completed:** 1 / 30
-* **Questions Completed:** 10 / 300
-* **Progress:** **3.33%**
+
+
+---
+
+# Date
+
+**03 August 2026**
+
+---
+
+# Questions Solved Today
+
+* Question 11 – Customer Retention Analysis
+* Question 12 – Low Inventory Alert
+* Question 13 – Discount Effectiveness
+* Question 14 – Returned Product Analysis
+* Question 15 – Shipping Mode Performance
+
+---
+
+# Business Problems Covered
+
+### 11. Customer Retention Analysis
+
+**Business Problem:**
+The marketing team wants to measure customer loyalty by identifying customers who have made purchases in more than one calendar year.
+
+**Concepts Learned:**
+
+* `YEAR()`
+* `STR_TO_DATE()`
+* `COUNT(DISTINCT)`
+* `GROUP BY`
+* `HAVING`
+
+---
+
+### 12. Low Inventory Alert
+
+**Business Problem:**
+The inventory team wants to identify products whose total quantity sold is below the average quantity sold across all products.
+
+**Concepts Learned:**
+
+* `SUM()`
+* `AVG()`
+* Subqueries
+* Aggregate Functions
+* `GROUP BY`
+* `HAVING`
+* `ORDER BY`
+
+---
+
+### 13. Discount Effectiveness
+
+**Business Problem:**
+The sales team wants to compare total revenue generated across different discount ranges to understand the impact of discounts on sales.
+
+**Concepts Learned:**
+
+* `CASE WHEN`
+* `BETWEEN`
+* `SUM()`
+* `ROUND()`
+* `GROUP BY`
+* Creating custom categories using `CASE`
+
+---
+
+### 14. Returned Product Analysis
+
+**Business Problem:**
+The quality assurance team wants to calculate the percentage of returned products for each category.
+
+**Concepts Learned:**
+
+* `CASE WHEN`
+* `COUNT()`
+* Conditional Aggregation
+* Percentage Calculation
+* `ROUND()`
+* `GROUP BY`
+
+---
+
+### 15. Shipping Mode Performance
+
+**Business Problem:**
+The operations team wants to determine the popularity of each shipping mode and identify the most frequently used shipping method.
+
+**Concepts Learned:**
+
+* `COUNT()`
+* `GROUP BY`
+* `ORDER BY DESC`
+* Ranking business metrics
+
+---
+
+# SQL Topics Covered Today
+
+* Date Functions (`YEAR()`, `STR_TO_DATE()`)
+* Conditional Statements (`CASE WHEN`)
+* Aggregate Functions
+
+  * `COUNT()`
+  * `SUM()`
+  * `AVG()`
+* Conditional Aggregation
+* `GROUP BY`
+* `HAVING`
+* `ORDER BY`
+* `ROUND()`
+* `BETWEEN`
+* Subqueries
+* Business KPI Calculations
+* Customer Analytics
+* Inventory Analytics
+* Sales Analytics
+* Return Rate Analysis
+* Logistics Analytics
+
+---
+
+# Key Learning Outcomes
+
+* Learned to convert business requirements into SQL queries.
+* Practiced conditional aggregation using `CASE WHEN`.
+* Understood how to calculate percentages and KPIs.
+* Used subqueries to compare product performance with overall averages.
+* Worked with date functions to analyze customer retention.
+* Created custom business categories using `CASE`.
+* Ranked business metrics using sorting and aggregation.
+
+---
+
+# Progress Tracker
+
+* **Challenge:** 300 SQL Questions
+* **Completed:** 15 / 300
+* **Remaining:** 285
+* **Daily Target:** 10 Questions
+* **Current Streak:** Day 2
+
+---
+
+
+
+
+
+
 
 
 
