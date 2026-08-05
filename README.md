@@ -237,6 +237,183 @@ The operations team wants to determine the popularity of each shipping mode and 
 * **Current Streak:** Day 2
 
 ---
+# 📅 SQL 300 Questions Challenge – Day 3
+
+## Goal
+
+Continue solving real-world SQL business problems to strengthen Data Analytics skills and prepare for Data Analyst interviews. The objective is to complete **300 SQL questions in 30 days** by focusing on business scenarios rather than memorizing syntax.
+
+---
+
+# Date
+
+**05 August 2026**
+
+---
+
+# Questions Solved Today
+
+* Question 16 – Weekday vs Weekend Sales Analysis
+* Question 17 – Customer Acquisition Trend
+* Question 18 – Payment Method Revenue Analysis
+* Question 19 – Regional Revenue Analysis
+* Question 20 – City-wise Sales Performance
+
+---
+
+# Business Problems Covered
+
+## 16. Weekday vs Weekend Sales Analysis
+
+**Business Problem**
+
+The marketing team wants to understand whether customers spend more on weekdays or weekends to optimize promotional campaigns.
+
+**Concepts Learned**
+
+* STR_TO_DATE()
+* DAYNAME()
+* CASE WHEN
+* SUM()
+* GROUP BY
+* ORDER BY
+* Common Table Expressions (CTEs)
+
+---
+
+## 17. Customer Acquisition Trend
+
+**Business Problem**
+
+The marketing department wants to analyze how many new customers were acquired each month based on their first purchase.
+
+**Concepts Learned**
+
+* MIN()
+* MONTH()
+* MONTHNAME()
+* COUNT()
+* GROUP BY
+* ORDER BY
+* Common Table Expressions (CTEs)
+* First Purchase Analysis
+
+---
+
+## 18. Payment Method Revenue Analysis
+
+**Business Problem**
+
+The finance team wants to understand customer payment preferences by calculating total revenue generated through each payment method.
+
+**Concepts Learned**
+
+* SUM()
+* ROUND()
+* GROUP BY
+* ORDER BY DESC
+* Revenue Analysis
+
+---
+
+## 19. Regional Revenue Analysis
+
+**Business Problem**
+
+Management wants to identify the highest-performing regions by comparing total revenue generated in each region.
+
+**Concepts Learned**
+
+* SUM()
+* ROUND()
+* GROUP BY
+* ORDER BY DESC
+* Regional Performance Analysis
+
+---
+
+## 20. City-wise Sales Performance
+
+**Business Problem**
+
+The sales team wants to identify the cities generating the highest revenue and rank them accordingly.
+
+**Concepts Learned**
+
+* SUM()
+* ROUND()
+* GROUP BY
+* ORDER BY DESC
+* City-wise Sales Analysis
+
+---
+
+# SQL Topics Covered Today
+
+## Date Functions
+
+* STR_TO_DATE()
+* DAYNAME()
+* MONTH()
+* MONTHNAME()
+
+## Conditional Logic
+
+* CASE WHEN
+* IN()
+
+## Aggregate Functions
+
+* SUM()
+* COUNT()
+* MIN()
+* ROUND()
+
+## Query Concepts
+
+* Common Table Expressions (WITH)
+* GROUP BY
+* ORDER BY
+* DISTINCT
+* Business KPI Calculations
+
+---
+
+# Business Analytics Skills Practiced
+
+* Customer Acquisition Analysis
+* Sales Trend Analysis
+* Payment Preference Analysis
+* Regional Revenue Analysis
+* City Performance Analysis
+* Weekday vs Weekend Revenue Comparison
+* Business Metric Calculation
+* Data Aggregation
+* Business Decision Support
+
+---
+
+# Key Learnings
+
+* Learned to extract useful information from text-based dates.
+* Used CTEs to simplify complex business queries.
+* Understood the difference between active customers and newly acquired customers.
+* Practiced solving real business problems instead of writing syntax-based queries.
+* Improved analytical thinking by translating business requirements into SQL logic.
+* Strengthened skills in grouping, aggregation, and ranking business metrics.
+
+---
+
+# Progress Tracker
+
+* **Challenge:** 300 SQL Business Problems
+* **Completed:** 20 / 300
+* **Remaining:** 280
+* **Completion:** 6.67%
+* **Current Streak:** Day 3
+
+---
+
 
 
 
