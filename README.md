@@ -414,7 +414,7 @@ The sales team wants to identify the cities generating the highest revenue and r
 
 ---
 
-# 📅 SQL 300 Questions Challenge – Day 4
+
 
 ## Goal
 
