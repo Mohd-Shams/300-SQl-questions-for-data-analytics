@@ -414,6 +414,239 @@ The sales team wants to identify the cities generating the highest revenue and r
 
 ---
 
+# 📅 SQL 300 Questions Challenge – Day 4
+
+## Goal
+
+Master SQL Window Functions by solving real-world business problems commonly asked in Data Analyst interviews. Today's focus was on ranking, partitioning, and month-over-month business analysis.
+
+---
+
+# Date
+
+**05 August 2026**
+
+---
+
+# Questions Solved Today
+
+* Question 21 – Top Product in Every Category
+* Question 22 – Top 3 Customers by Revenue in Every Region
+* Question 23 – Rank Products by Revenue
+* Question 24 – Best-Selling Products with Dense Ranking
+* Question 25 – Month-over-Month Sales Comparison
+
+---
+
+# Business Problems Covered
+
+## 21. Top Product in Every Category
+
+### Business Problem
+
+Management wants to identify the highest-selling product in each product category.
+
+### Concepts Learned
+
+* Common Table Expressions (CTEs)
+* SUM()
+* GROUP BY
+* ROW_NUMBER()
+* PARTITION BY
+* ORDER BY
+* Top-N per Group Pattern
+
+---
+
+## 22. Top 3 Customers by Revenue in Every Region
+
+### Business Problem
+
+The sales team wants to identify the top three revenue-generating customers in each region for customer relationship management.
+
+### Concepts Learned
+
+* Multiple CTEs
+* SUM()
+* GROUP BY
+* ROW_NUMBER()
+* PARTITION BY
+* Filtering Ranked Data (WHERE rn <= 3)
+
+---
+
+## 23. Rank Products by Revenue
+
+### Business Problem
+
+Rank all products based on their total revenue from highest to lowest to identify the best-performing products.
+
+### Concepts Learned
+
+* RANK()
+* SUM()
+* GROUP BY
+* ORDER BY
+* Product Revenue Ranking
+
+---
+
+## 24. Best-Selling Products with Dense Ranking
+
+### Business Problem
+
+Assign rankings to products based on revenue without skipping rank numbers when products have equal revenue.
+
+### Concepts Learned
+
+* DENSE_RANK()
+* GROUP BY
+* SUM()
+* Handling Ties in Ranking
+
+---
+
+## 25. Month-over-Month Sales Comparison
+
+### Business Problem
+
+The management team wants to compare each month's sales with the previous month to identify business growth and seasonal trends.
+
+### Concepts Learned
+
+* LAG()
+* MONTH()
+* MONTHNAME()
+* STR_TO_DATE()
+* SUM()
+* Month-over-Month (MoM) Analysis
+
+---
+
+# SQL Topics Covered Today
+
+## Window Functions
+
+* ROW_NUMBER()
+* RANK()
+* DENSE_RANK()
+* LAG()
+* OVER()
+* PARTITION BY
+* ORDER BY (inside OVER)
+
+---
+
+## Date Functions
+
+* STR_TO_DATE()
+* MONTH()
+* MONTHNAME()
+
+---
+
+## Aggregate Functions
+
+* SUM()
+* ROUND()
+
+---
+
+## Advanced SQL Concepts
+
+* Common Table Expressions (CTEs)
+* Ranking Functions
+* Window Functions
+* Top-N Analysis
+* Month-over-Month Analysis
+* Business KPI Reporting
+
+---
+
+# Business Analytics Skills Practiced
+
+* Product Performance Analysis
+* Customer Revenue Ranking
+* Regional Customer Analysis
+* Product Leaderboards
+* Revenue-Based Ranking
+* Trend Analysis
+* Sales Performance Reporting
+* Business Decision Support
+
+---
+
+# Key Learnings
+
+* Understood the difference between GROUP BY and Window Functions.
+* Learned that Window Functions preserve individual rows while performing calculations across related rows.
+* Practiced using PARTITION BY to rank records within groups.
+* Learned the differences between ROW_NUMBER(), RANK(), and DENSE_RANK().
+* Performed Month-over-Month sales comparison using LAG().
+* Applied multiple CTEs to simplify complex analytical queries.
+* Learned the standard SQL interview pattern for solving Top-N business problems.
+
+---
+
+# Interview Patterns Learned
+
+## Pattern 1 – Top N Per Group
+
+Aggregate Data
+
+↓
+
+Create CTE
+
+↓
+
+Apply ROW_NUMBER()
+
+↓
+
+Filter using `WHERE rn <= N`
+
+---
+
+## Pattern 2 – Ranking Business Metrics
+
+Aggregate Revenue
+
+↓
+
+Apply `RANK()` or `DENSE_RANK()`
+
+↓
+
+Generate Business Leaderboard
+
+---
+
+## Pattern 3 – Month-over-Month Analysis
+
+Aggregate Monthly Sales
+
+↓
+
+Apply `LAG()`
+
+↓
+
+Compare Current vs Previous Month
+
+---
+
+# Progress Tracker
+
+* **SQL Challenge:** 300 Business Problems
+* **Completed:** 25 / 300
+* **Remaining:** 275
+* **Completion:** 8.33%
+* **Current Streak:** Day 4
+
+---
+
+#
 
 
 
