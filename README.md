@@ -647,6 +647,264 @@ Compare Current vs Previous Month
 ---
 
 #
+# 📅 SQL 300 Questions Challenge – Day 5
+
+## Goal
+
+Strengthen SQL Window Function skills by solving real-world business problems involving forecasting, cumulative calculations, revenue contribution, and customer analytics.
+
+---
+
+# Date
+
+**06 August 2026**
+
+---
+
+# Questions Solved Today
+
+* Question 26 – Forecast Next Month's Revenue
+* Question 27 – Running Sales Total
+* Question 28 – Percentage Contribution by Category
+* Question 29 – Highest Revenue Order per Customer
+* Question 30 – Customer Lifetime Value (CLV) Ranking
+
+---
+
+# Business Problems Covered
+
+## 26. Forecast Next Month's Revenue
+
+### Business Problem
+
+The finance team wants to compare each month's sales with the following month's sales to forecast business trends and identify upcoming changes.
+
+### Concepts Learned
+
+* LEAD()
+* OVER()
+* ORDER BY
+* MONTH()
+* MONTHNAME()
+* STR_TO_DATE()
+* Common Table Expressions (CTEs)
+
+---
+
+## 27. Running Sales Total
+
+### Business Problem
+
+The management team wants to monitor cumulative revenue earned throughout the year by calculating the running total of monthly sales.
+
+### Concepts Learned
+
+* Window SUM()
+* OVER(ORDER BY ...)
+* Running Total
+* Cumulative Revenue
+* Monthly Aggregation
+
+---
+
+## 28. Percentage Contribution by Category
+
+### Business Problem
+
+The finance department wants to know how much each product category contributes to the company's overall revenue.
+
+### Concepts Learned
+
+* SUM()
+* SUM() OVER()
+* Percentage Calculation
+* GROUP BY
+* Revenue Contribution Analysis
+
+---
+
+## 29. Highest Revenue Order per Customer
+
+### Business Problem
+
+The sales team wants to identify the highest-value order placed by every customer.
+
+### Concepts Learned
+
+* ROW_NUMBER()
+* PARTITION BY
+* ORDER BY
+* CTE
+* Ranking Within Groups
+
+---
+
+## 30. Customer Lifetime Value (CLV) Ranking
+
+### Business Problem
+
+The marketing team wants to identify the most valuable customers by ranking them according to their total lifetime spending.
+
+### Concepts Learned
+
+* SUM()
+* GROUP BY
+* DENSE_RANK()
+* Customer Revenue Analysis
+* Customer Ranking
+
+---
+
+# SQL Topics Covered Today
+
+## Window Functions
+
+* LEAD()
+* ROW_NUMBER()
+* DENSE_RANK()
+* SUM() OVER()
+
+---
+
+## Aggregate Functions
+
+* SUM()
+* ROUND()
+
+---
+
+## Date Functions
+
+* STR_TO_DATE()
+* MONTH()
+* MONTHNAME()
+
+---
+
+## Advanced SQL Concepts
+
+* Common Table Expressions (CTEs)
+* Running Totals
+* Revenue Forecasting
+* Revenue Contribution Analysis
+* Customer Lifetime Value (CLV)
+* Ranking and Partitioning
+* Window Aggregation
+
+---
+
+# Business Analytics Skills Practiced
+
+* Revenue Forecasting
+* Running Revenue Analysis
+* Category Revenue Contribution
+* Customer Order Analysis
+* Customer Lifetime Value Analysis
+* Customer Segmentation
+* Revenue-Based Decision Making
+* Financial Reporting
+
+---
+
+# Key Learnings
+
+* Learned how `LEAD()` retrieves the next row in a window.
+* Calculated cumulative sales using `SUM() OVER(ORDER BY ...)`.
+* Used `SUM() OVER()` to calculate percentage contribution without losing row-level detail.
+* Identified the highest-value order for each customer using `ROW_NUMBER()`.
+* Ranked customers based on lifetime revenue using `DENSE_RANK()`.
+* Improved understanding of CTEs to simplify complex analytical queries.
+* Practiced solving interview-level business problems using window functions.
+
+---
+
+# Interview Patterns Learned
+
+## Pattern 1 – Forecasting
+
+Aggregate Monthly Revenue
+
+↓
+
+Apply `LEAD()`
+
+↓
+
+Compare Current Month vs Next Month
+
+---
+
+## Pattern 2 – Running Total
+
+Aggregate Monthly Revenue
+
+↓
+
+Apply `SUM() OVER(ORDER BY ...)`
+
+↓
+
+Calculate Cumulative Revenue
+
+---
+
+## Pattern 3 – Percentage Contribution
+
+Aggregate Revenue
+
+↓
+
+Apply `SUM() OVER()`
+
+↓
+
+Calculate Percentage of Total Revenue
+
+---
+
+## Pattern 4 – Highest Record per Group
+
+Use `ROW_NUMBER()`
+
+↓
+
+`PARTITION BY` Group
+
+↓
+
+`ORDER BY` Metric DESC
+
+↓
+
+Filter using `WHERE rn = 1`
+
+---
+
+## Pattern 5 – Customer Ranking
+
+Aggregate Customer Revenue
+
+↓
+
+Apply `DENSE_RANK()`
+
+↓
+
+Generate Customer Leaderboard
+
+---
+
+# Progress Tracker
+
+* **SQL Challenge:** 300 Business Problems
+* **Completed:** 30 / 300
+* **Remaining:** 270
+* **Completion:** 10%
+* **Current Streak:** Day 5
+
+---
+
+
 
 
 
