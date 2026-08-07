@@ -40,9 +40,28 @@ GROUP BY payment_method
 ORDER BY avg_value DESC
 LIMIT 1;
 
+-- 34. Monthly Revenue Growth Percentage
+-- Business Problem
 
+-- The finance team wants to calculate the percentage growth (or decline) in revenue compared with the previous month.
 
+WITH rev_month 
+AS( SELECT
+	MONTH(STR_TO_DATE(order_date, '%m/%d/%Y')) AS month_no,
+    MONTHNAME(STR_TO_DATE(order_date, '%m/%d/%Y')) AS month_name,
+    SUM(total_amount) AS total_sales
+FROM data3
+GROUP BY
+    MONTH(STR_TO_DATE(order_date, '%m/%d/%Y')),
+    MONTHNAME(STR_TO_DATE(order_date, '%m/%d/%Y'))
+ORDER BY
+    MONTH(STR_TO_DATE(order_date, '%m/%d/%Y')))
+    
 
+SELECT month_name, total_sales AS this_month_sales,
+LAG(total_sales) OVER(ORDER BY month_no )AS previous_month_sales,
+ROUND(((total_sales - (LAG(total_sales) OVER(ORDER BY month_no )))/(LAG(total_sales) OVER(ORDER BY month_no ))*100),2)AS growth
+FROM rev_month 
 
 
 
