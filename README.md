@@ -904,6 +904,191 @@ Generate Customer Leaderboard
 
 ---
 
+# SQL Business Case Study – Problems 31 to 35
+
+## 📌 Project Overview
+
+This project contains SQL solutions to five real-world business problems commonly encountered by Data Analysts. The objective is to analyze sales data and derive meaningful business insights using SQL.
+
+The queries demonstrate the use of:
+
+* Common Table Expressions (CTEs)
+* Aggregate Functions
+* Window Functions
+* Ranking Functions
+* Joins
+* Date Functions
+* Business KPI Analysis
+
+---
+
+## 📂 Dataset
+
+**Table Name:** `data3`
+
+The dataset represents an e-commerce business and includes information such as:
+
+* Order Date
+* Customer Details
+* Product Information
+* Sales Amount
+* Region
+* City
+* Sales Representative
+* Payment Method
+
+---
+
+## 🛠 SQL Concepts Used
+
+* SELECT
+* GROUP BY
+* ORDER BY
+* Aggregate Functions (`SUM`, `AVG`)
+* CTEs (`WITH`)
+* INNER JOIN
+* Window Functions (`LAG`, `DENSE_RANK`)
+* Date Functions
+* Ranking Functions
+
+---
+
+# Business Problems Solved
+
+## Problem 31 – Top 5 Revenue-Generating Cities
+
+### Business Question
+
+Which five cities generated the highest revenue?
+
+### Business Value
+
+* Identify top-performing markets.
+* Allocate marketing budget effectively.
+* Improve inventory planning.
+
+### SQL Concepts
+
+* SUM()
+* GROUP BY
+* ORDER BY
+* LIMIT
+
+---
+
+## Problem 32 – Best Performing Sales Representative in Every Region
+
+### Business Question
+
+Who is the highest revenue-generating sales representative in each region?
+
+### Business Value
+
+* Measure employee performance.
+* Design incentive programs.
+* Identify top performers.
+
+### SQL Concepts
+
+* CTE
+* DENSE_RANK()
+* Window Functions
+* PARTITION BY
+
+---
+
+## Problem 33 – Highest Average Order Value by Payment Method
+
+### Business Question
+
+Which payment method generates the highest average order value?
+
+### Business Value
+
+* Understand customer payment behavior.
+* Optimize payment promotions.
+* Improve checkout strategy.
+
+### SQL Concepts
+
+* AVG()
+* GROUP BY
+* ORDER BY
+
+---
+
+## Problem 34 – Monthly Revenue Growth Percentage
+
+### Business Question
+
+How has revenue changed month over month?
+
+### Business Value
+
+* Measure business growth.
+* Detect seasonal trends.
+* Support forecasting and budgeting.
+
+### SQL Concepts
+
+* CTE
+* LAG()
+* Window Functions
+* Date Functions
+* Percentage Calculations
+
+---
+
+## Problem 35 – Customers Spending Above Regional Average
+
+### Business Question
+
+Which customers spend more than the average customer in their region?
+
+### Business Value
+
+* Identify high-value customers.
+* Support customer segmentation.
+* Improve loyalty and retention strategies.
+
+### SQL Concepts
+
+* Multiple CTEs
+* INNER JOIN
+* AVG()
+* SUM()
+* GROUP BY
+
+---
+
+# Key Learnings
+
+Through this project, I practiced:
+
+* Writing analytical SQL queries
+* Solving real business problems
+* Using CTEs to simplify complex logic
+* Applying window functions for advanced analytics
+* Performing customer and sales analysis
+* Translating business questions into SQL solutions
+
+---
+
+# Skills Demonstrated
+
+* SQL
+* Data Analysis
+* Business Analytics
+* Window Functions
+* Data Aggregation
+* Customer Analytics
+* Sales Analytics
+* Performance Analysis
+
+---
+
+
+
 
 
 
