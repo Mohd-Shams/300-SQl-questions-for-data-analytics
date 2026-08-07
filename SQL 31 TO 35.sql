@@ -61,9 +61,47 @@ ORDER BY
 SELECT month_name, total_sales AS this_month_sales,
 LAG(total_sales) OVER(ORDER BY month_no )AS previous_month_sales,
 ROUND(((total_sales - (LAG(total_sales) OVER(ORDER BY month_no )))/(LAG(total_sales) OVER(ORDER BY month_no ))*100),2)AS growth
-FROM rev_month 
+FROM rev_month ;
 
 
+
+-- 35. Customers Spending Above Regional Average
+-- Business Problem
+
+-- Regional managers want to identify customers whose total spending is higher than the average customer spending within their own region.
+
+WITH spendings as(SELECT region,customer_id,customer_name,ROUND(SUM(total_amount),2)AS total_spend
+FROM data3
+GROUP BY region,customer_id,customer_name),
+
+avg_region AS(SELECT region,ROUND(AVG(total_spend),2) AS avg_region_spend
+FROM spendings
+GROUP BY region)
+
+SELECT s.region,s.customer_id,s.customer_name,s.total_spend 
+FROM spendings s
+INNER JOIN avg_region a
+ON s.region = a.region
+WHERE s.total_spend > a.avg_region_spend
+
+-- smaller version
+
+WITH spendings AS (
+    SELECT
+        region,
+        customer_id,
+        customer_name,
+        SUM(total_amount) AS total_spend
+    FROM data3
+    GROUP BY region, customer_id, customer_name
+)
+SELECT *
+FROM (
+    SELECT *,
+           AVG(total_spend) OVER (PARTITION BY region) AS avg_region_spend
+    FROM spendings
+) t
+WHERE total_spend > avg_region_spend;
 
 
 
