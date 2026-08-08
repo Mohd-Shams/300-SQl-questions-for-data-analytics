@@ -1086,6 +1086,288 @@ Through this project, I practiced:
 * Performance Analysis
 
 ---
+# SQL Business Problems — Day 8
+
+## Questions 36–40
+
+**Date:** 8 August 2026
+**Dataset:** `data3`
+**Database:** `sql300`
+**Focus:** Advanced SQL, CTEs, Window Functions, Aggregation & Business Analysis
+
+---
+
+## 📌 About This Practice
+
+Today I solved 5 business-oriented SQL problems designed to strengthen my understanding of:
+
+* CTEs
+* `CASE WHEN`
+* Conditional aggregation
+* `SUM()` and `COUNT()`
+* `COUNT(DISTINCT)`
+* Subqueries
+* `ROW_NUMBER()`
+* `PARTITION BY`
+* Date functions
+* Quarterly analysis
+* Business-oriented SQL problem solving
+
+---
+
+## 📊 Questions Covered
+
+### 36. Most Returned Product in Every Category
+
+**Business Problem:**
+The quality assurance team wants to identify the product with the highest number of returned orders in each product category.
+
+**Concepts Used:**
+
+* `CASE WHEN`
+* Conditional aggregation
+* `SUM()`
+* CTE
+* `ROW_NUMBER()`
+* `PARTITION BY`
+
+**Approach:**
+
+1. Count returned orders for every product within each category.
+2. Rank products based on returned orders within each category.
+3. Select the product with rank 1.
+
+---
+
+### 37. Revenue Contribution of Each Region
+
+**Business Problem:**
+The executive team wants to determine what percentage of the company's total revenue is contributed by each region.
+
+**Concepts Used:**
+
+* `SUM()`
+* Subquery
+* Percentage calculation
+* `ROUND()`
+* `GROUP BY`
+
+**Approach:**
+
+```text
+Regional Revenue
+---------------- × 100
+Total Revenue
+```
+
+This helps identify how much each region contributes to overall company revenue.
+
+---
+
+### 38. Customers Purchasing in Multiple Categories
+
+**Business Problem:**
+The marketing team wants to identify customers who have purchased products from three or more different categories for cross-selling opportunities.
+
+**Concepts Used:**
+
+* `COUNT(DISTINCT)`
+* `GROUP BY`
+* `HAVING`
+
+**Approach:**
+
+1. Group purchases by customer.
+2. Count the number of unique categories purchased.
+3. Keep customers who purchased from at least 3 categories.
+
+---
+
+### 39. Most Popular Shipping Mode by Region
+
+**Business Problem:**
+The logistics team wants to identify the most frequently used shipping mode in each region.
+
+**Concepts Used:**
+
+* `COUNT()`
+* CTE
+* `ROW_NUMBER()`
+* `PARTITION BY`
+* `ORDER BY`
+
+**Approach:**
+
+1. Count each shipping mode within every region.
+2. Rank shipping modes within each region.
+3. Select the mode with rank 1.
+
+---
+
+### 40. Revenue Trend by Quarter
+
+**Business Problem:**
+The finance department wants to analyze quarterly revenue trends to understand seasonal business performance.
+
+**Concepts Used:**
+
+* `STR_TO_DATE()`
+* `YEAR()`
+* `QUARTER()`
+* `SUM()`
+* `GROUP BY`
+* `ORDER BY`
+
+**Approach:**
+
+1. Convert the order date into a valid date.
+2. Extract the year and quarter.
+3. Calculate total revenue for every quarter.
+4. Sort the results chronologically.
+
+---
+
+## 🧠 Key SQL Patterns Learned
+
+### Top 1 Within Each Group
+
+```sql
+ROW_NUMBER() OVER (
+    PARTITION BY category
+    ORDER BY returned_orders DESC
+)
+```
+
+Then:
+
+```sql
+WHERE rn = 1
+```
+
+This pattern can be used for:
+
+* Highest-selling product per category
+* Most returned product per category
+* Most popular shipping mode per region
+* Top customer per region
+
+---
+
+### Conditional Counting
+
+```sql
+SUM(
+    CASE
+        WHEN return_status = 'YES' THEN 1
+        ELSE 0
+    END
+)
+```
+
+This is useful when a column contains values such as `YES` and `NO` and I need to count only specific records.
+
+---
+
+### Unique Category Analysis
+
+```sql
+COUNT(DISTINCT category)
+```
+
+Useful for finding customers who purchased from multiple product categories.
+
+---
+
+### Revenue Contribution
+
+```sql
+SUM(total_amount) /
+(SELECT SUM(total_amount) FROM data3) * 100
+```
+
+This calculates the percentage contribution of a group to total revenue.
+
+---
+
+### Quarterly Analysis
+
+```sql
+YEAR(STR_TO_DATE(order_date, '%m/%d/%Y'))
+```
+
+and
+
+```sql
+QUARTER(STR_TO_DATE(order_date, '%m/%d/%Y'))
+```
+
+can be used to analyze business performance by quarter.
+
+---
+
+## 📚 SQL Concepts Practiced So Far
+
+Through the first 40 business problems, I have practiced:
+
+* `SELECT`
+* `WHERE`
+* `ORDER BY`
+* `LIMIT`
+* `DISTINCT`
+* `COUNT()`
+* `COUNT(DISTINCT)`
+* `SUM()`
+* `AVG()`
+* `MIN()`
+* `MAX()`
+* `ROUND()`
+* `GROUP BY`
+* `HAVING`
+* `CASE WHEN`
+* Subqueries
+* CTEs
+* `ROW_NUMBER()`
+* `RANK()`
+* `DENSE_RANK()`
+* `LAG()`
+* `PARTITION BY`
+* Date functions
+* Month-wise analysis
+* Quarter-wise analysis
+* Revenue contribution
+* Business KPI calculations
+
+---
+
+## 🎯 Today's Learning Outcome
+
+Today's practice focused heavily on **turning business questions into SQL logic**.
+
+The most important pattern I practiced was:
+
+```text
+Business Problem
+       ↓
+Identify required metric
+       ↓
+Aggregate the data
+       ↓
+Use CTE / Subquery if needed
+       ↓
+Apply Window Function
+       ↓
+Filter the required result
+```
+
+I am continuing to build SQL skills specifically for **Data Analyst internship and entry-level job interviews**.
+
+---
+
+## 📈 Progress
+
+**SQL Business Problems Completed: 40 / 300**
+
+
 
 
 
