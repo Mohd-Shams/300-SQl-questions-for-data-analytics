@@ -24,15 +24,40 @@ rankings AS(SELECT
                 ROW_NUMBER() OVER (PARTITION BY category
 							ORDER BY returned_orders DESC) AS rn
                             FROM return_)
-                
-                
-                
-                
+
 SELECT category,
 product_name,
 returned_orders
 FROM rankings
-WHERE rn = 1
+WHERE rn = 1;
+
+
+
+-- 37. Revenue Contribution of Each Region
+-- Business Problem
+
+-- The executive team wants to determine what percentage of the company's total revenue is contributed by each region.
+
+SELECT region,
+		ROUND(SUM(total_amount),2)AS total_revenue ,
+        ROUND((SUM(total_amount)/(SELECT SUM(total_amount) FROM data3)*100),2) AS rev_contribution
+FROM data3
+GROUP BY region
+
+
+38. Customers Purchasing in Multiple Categories
+Business Problem
+
+The marketing team wants to identify customers who have purchased products from three or more
+different categories for cross-selling opportunities.
+
+from 
+
+
+
+
+
+
 
 
 
